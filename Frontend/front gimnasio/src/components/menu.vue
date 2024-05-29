@@ -15,12 +15,14 @@ import router from '@/router';
    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
       <ul class="space-y-2 font-medium">
          <li>
+         <RouterLink to="/dashboard">
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <span class="material-symbols-outlined">
                   dashboard
                   </span>
                <span class="ms-3">Dashboard</span>
             </a>
+            </RouterLink>
          </li>
          <li>
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -43,16 +45,24 @@ import router from '@/router';
             </button>
             <ul id="dropdown-example5" class="hidden py-2 space-y-2">
                   <li>
+                  <RouterLink to="/dietas">
                      <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Dietas</a>
+                  </RouterLink>
                   </li>
                   <li>
                      <li>
+                     <RouterLink to="/indicadorN">
                         <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Indicador Nutricional</a>
+                     </RouterLink>
                      </li>
                      <li>
+                     <RouterLink to="/preguntaN">
                         <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Pregunta Nutricional</a>
+                     </RouterLink>
                      </li>
+                     <RouterLink to="/valoracionN">
                      <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Valoración Nutricional</a>
+                  </RouterLink>
                   </li>
                  
                 
