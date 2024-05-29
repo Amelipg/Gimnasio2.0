@@ -58,14 +58,10 @@
                     </div>
 
                     <div class="mx-auto max-w-xs">
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                            type="email" placeholder="Email" />
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                            type="password" placeholder="Password" />
+                       <FormLogin> </FormLogin>
+                       <a href="/menu" class="col-span-2">
                         <button
-                            class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                            class="mt-5 tracking-wide font-semibold bg-red-700 text-gray-100 w-full py-4 rounded-lg hover:bg-red-900 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                             <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
@@ -73,9 +69,10 @@
                                 <path d="M20 8v6M23 11h-6" />
                             </svg>
                             <span class="ml-3">
-                                Sign Up
+                                Iniciar Sesión
                             </span>
                         </button>
+                        </a>
                         <p class="mt-6 text-xs text-gray-600 text-center">
                             I agree to abide by templatana's
                             <a href="#" class="border-b border-gray-500 border-dotted">
@@ -90,12 +87,23 @@
                 </div>
             </div>
         </div>
-        <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
-            <div class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-                style="background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');">
+        <div class="flex-1 bg-gray-500 text-center hidden lg:flex ">
+                <div class="m-12 xl:m-16 w-10/12 bg-contain bg-center bg-no-repeat "
+                    style="background-image: url('https://i.ibb.co/pdP0hjc/logo-gimnasio.png');">
+                </div>
             </div>
-        </div>
     </div>
 </div>
 
 </template>
+
+<script>
+import FormLogin from './FormLogin.vue';
+
+export default{
+    components: {
+        FormLogin   
+        
+    }
+}
+</script>

@@ -7,54 +7,9 @@
                     Registrarse
                 </h1>
                 <div class="w-full flex-1 mt-8 grid-cols-2">
-                    <div class="grid grid-rows-2 grid-cols-2 gap-1">
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5 col-span-2"
-                            type="text" placeholder="Nombre Completo" 
-                        />
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                            type="text" placeholder="Primer Apellido" 
-                        />
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                            type="text" placeholder="Segundo Apellido" 
-                        />
-                        <select id="countries" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5">
-                            <option selected>Genero</option>
-                            <option value="M">Masculino</option>
-                            <option value="F">Femenino</option>
-                            <option value="NB">No Binario</option>
-                        </select>
-                        <select id="countries" class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5">
-                            <option selected>Tipo de Sangre</option>
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-                        </select>
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5 col-span-2"
-                            type="email" placeholder="Email" 
-                        />
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5 "
-                            type="password" placeholder="Contraseña" 
-                        />
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                            type="date" placeholder="Fecha de Nacimiento" 
-                        />
-                  
-                        <label for="" class="font-medium col-span-2 ">Fotografia</label>
-                        <input
-                            class="w-full px-1 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-1 col-span-2"
-                            type="file" placeholder="Fotografia"
-                        />
+                    <div class=" gap-1">
+                       <Persona> </Persona>
+                       <Usuario> </Usuario>
                         <a href="/menu" class="col-span-2" >
                             <button
                                 class="mt-5 tracking-wide font-semibold bg-red-700 text-gray-100 w-full py-4 rounded-lg hover:bg-red-900 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none col-span-2">
@@ -81,9 +36,27 @@
                         </p>
                     </div>
                 </div>
+                
             </div>
         </div>
+        <div class="flex-1 bg-gray-500 text-center hidden lg:flex ">
+                <div class="m-12 xl:m-16 w-10/12 bg-contain bg-center bg-no-repeat "
+                    style="background-image: url('https://i.ibb.co/pdP0hjc/logo-gimnasio.png');">
+                </div>
+            </div>
         
     </div>
 </div>
 </template>
+
+<script>
+import Persona from './Persona.vue';
+import Usuario from './Usuario.vue';
+
+export default{
+    components: {
+        Persona,
+        Usuario
+    }
+}
+</script>

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../components/login.vue'
 import RegisterUserView from '../components/RegisterUser.vue'
 import MenuView from './../components/menu.vue'
+import Persona from './../components/Persona.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,7 +23,7 @@ const router = createRouter({
       name: 'menu',
       component: MenuView,
       children: [
-        {path: '/personas', name: 'personas', component:RegisterUserView}
+        {path: '/personas', name: 'personas', component: Persona}
       ]
     },
 
