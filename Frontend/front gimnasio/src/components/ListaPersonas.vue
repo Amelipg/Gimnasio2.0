@@ -69,19 +69,28 @@
                     </div>
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Product name
+                    Nombre
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Color
+                    Primer Apellido
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Category
+                    Segundo Apellido
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Price
+                    Genero
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Action
+                    Tipo de Sangre
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fecha
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fotografia
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Acciones
                 </th>
             </tr>
         </thead>
@@ -103,10 +112,20 @@
                     Laptop
                 </td>
                 <td class="px-6 py-4">
+                    Laptop
+                </td>
+                <td class="px-6 py-4">
                     $2999
                 </td>
                 <td class="px-6 py-4">
+                    $2999
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Seleccionar</a>
+                </td>
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">  Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -126,10 +145,20 @@
                     Laptop PC
                 </td>
                 <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
                     $1999
                 </td>
                 <td class="px-6 py-4">
+                    $1999
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Seleccionar</a>
+                </td>
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">  Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -149,10 +178,20 @@
                     Accessories
                 </td>
                 <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
                     $99
                 </td>
                 <td class="px-6 py-4">
+                    $99
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Seleccionar</a>
+                </td>
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">  Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -172,10 +211,20 @@
                     Accessories
                 </td>
                 <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
                     $179
                 </td>
                 <td class="px-6 py-4">
+                    $179
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Seleccionar</a>
+                </td>
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"> Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -195,10 +244,20 @@
                     Tablet
                 </td>
                 <td class="px-6 py-4">
+                    Tablet
+                </td>
+                <td class="px-6 py-4">
                     $699
                 </td>
                 <td class="px-6 py-4">
+                    $699
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Seleccionar</a>
+                </td>
+                <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"> Delete</a>
                 </td>
             </tr>
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -217,11 +276,21 @@
                 <td class="px-6 py-4">
                     PC Desktop
                 </td>
+                    <td class="px-6 py-4">
+                        PC Desktop
+                    </td>
                 <td class="px-6 py-4">
                     $3999
                 </td>
                 <td class="px-6 py-4">
+                    $3999
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Seleccionar</a>
+                </td>
+                <td class=" px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"> Delete</a>
                 </td>
             </tr>
         </tbody>
