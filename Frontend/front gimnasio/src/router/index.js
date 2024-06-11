@@ -8,6 +8,7 @@ import Dietas from './../components/Dietas.vue'
 import IndicadorN from './../components/IndicadorN.vue'
 import PreguntaN from './../components/PreguntaN.vue'
 import ValoracionN from './../components/ValoracionN.vue'
+import ListaPersonas from '@/components/ListaPersonas.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,7 +29,7 @@ const router = createRouter({
       name: 'menu',
       component: MenuView,
       children: [
-        {path: '/personas', name: 'personas', component: Persona},
+        {path: '/personas', name: 'personas', component: ListaPersonas},
         {path: '/dashboard', name: 'dashboard', component: Dashboard},
         {path: '/dietas', name: 'dietas', component: Dietas},
         {path: '/indicadorN', name: 'indicadorN', component: IndicadorN},
