@@ -3,29 +3,62 @@ from pydantic import BaseModel
 from datetime import datetime
 
 user = APIRouter()
-users=[]
+users = [
 
-#usersModel
-class Model_user(BaseModel):
+]
+class models_user(BaseModel):
     id:str
     usuario:str
-    password:str
-    created_at:datetime = datetime.now
+    contrasena: str
+    created_at:datetime = datetime.now()
     estatus:bool=False
 
 @user.get("/")
 
-def bienvenida():
-        return "Bienvenido al sistema de apis"
+def Bienvenidos():
+    return "Hola 9°B desde el método GET"
 
-@user.get("/users")
+@user.get("/users", tags=["Usuarios"])
 
-def get_usuarios():
-        return users
+def get_Users():
+    return users
 
-@user.post('/users')
+@user.get("/users/{user_id}", tags=["Usuarios"])
 
-def save_usuarios(insert_users:Model_user):
-       users.append(insert_users)
-       #print(users)
-       return "Datos guardados"
+def get_User(user_id: str):
+    for user in users:
+        if user.id == user_id:
+            return user
+
+@user.post('/users', tags=["Usuarios"])
+
+def insert_User(insert_user:models_user):
+    users.append(insert_user)
+    return {"message": f"Se ha insertado un nuevo usuario con el ID: {insert_user.id}"}
+
+@user.put('/users/{user_id}', tags=["Usuarios"])
+
+def update_User(update_user:models_user, user_id: str):
+    print(update_user)
+    for index, user in enumerate(users):
+        if user.id == user_id:
+            update_user.created_at = user.created_at
+        
+            users[index] = update_user
+            
+            return {"message": f"Se ha modificado correctamente al usuario con el ID: {user_id}"}
+
+@user.delete('/users/{user_id}', tags=["Usuarios"])
+
+def delete_User(user_id: str):
+    for index, user in enumerate(users):
+        if user.id == user_id:
+            users.pop(index)
+            return {"message": f"Se ha eliminado correctamente al usuario con el ID: {user_id}"}
+        
+@user.post("/users/{user_id}", tags=["Usuarios"])
+
+def post_User(user_id: str):
+    for user in users:
+        if user.id == user_id:
+            return user
