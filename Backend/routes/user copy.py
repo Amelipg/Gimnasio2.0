@@ -1,28 +1,26 @@
-from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
-from config.db import SessionLocal, engine
-import schemas, models
-from cruds import crud
+from fastapi import APIRouter
+from pydantic import BaseModel
+from datetime import datetime
 
 user = APIRouter()
+users = [
 
-def get_db():
-    db=SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
+]
+class models_user(BaseModel):
+    id:str
+    usuario:str
+    contrasena: str
+    created_at:datetime = datetime.now()
+    estatus:bool=False
 
 @user.get("/")
 
 def Bienvenidos():
     return "Hola 9°B desde el método GET"
 
-@user.get("/users", response_model=list[schemas.users],tags=["Usuarios"])
+@user.get("/users", tags=["Usuarios"])
 
-def get_usuarios(skip: int = 0, limit: int=10, db:Session = Depends(get_db)):
-    users = crud.get_users(db, skip=skip, limit=limit)
+def get_Users():
     return users
 
 @user.get("/users/{user_id}", tags=["Usuarios"])
