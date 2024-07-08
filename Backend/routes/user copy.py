@@ -1,64 +1,57 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 from datetime import datetime
+from typing import List
 
 user = APIRouter()
-users = [
+users = []
 
-]
-class models_user(BaseModel):
-    id:str
-    usuario:str
+# Modelo de usuarios
+class UserModel(BaseModel):
+    id: str
+    usuarios: str
     contrasena: str
-    created_at:datetime = datetime.now()
-    estatus:bool=False
+    created_at: datetime = datetime.now()
+    estatus: bool = False
 
-@user.get("/")
+# Ruta de bienvenida
+@user.get('/')
+def bienvenido():
+    return 'Bienvenido al sistema de APIs'
 
-def Bienvenidos():
-    return "Hola 9°B desde el método GET"
-
-@user.get("/users", tags=["Usuarios"])
-
-def get_Users():
+# Ruta para obtener todos los usuarios
+@user.get('/users', response_model=List[UserModel],tags=['Usuarios'])
+def get_usuarios():
     return users
 
-@user.get("/users/{user_id}", tags=["Usuarios"])
+# Ruta para agregar un nuevo usuario
+@user.post('/users', response_model=UserModel,tags=['Usuarios'])
+def save_users(insert_users: UserModel):
+    users.append(insert_users)
+    return insert_users
 
-def get_User(user_id: str):
+# Ruta para buscar un usuario por ID
+@user.get('/users/{user_id}', response_model=UserModel,tags=['Usuarios'])
+def get_usuario_por_id(user_id: str):
     for user in users:
         if user.id == user_id:
             return user
+    return {"error": "Usuario no encontrado"}
 
-@user.post('/users', tags=["Usuarios"])
-
-def insert_User(insert_user:models_user):
-    users.append(insert_user)
-    return {"message": f"Se ha insertado un nuevo usuario con el ID: {insert_user.id}"}
-
-@user.put('/users/{user_id}', tags=["Usuarios"])
-
-def update_User(update_user:models_user, user_id: str):
-    print(update_user)
-    for index, user in enumerate(users):
+# Ruta para modificar un usuario por ID
+@user.put('/users/{user_id}', response_model=UserModel,tags=['Usuarios'])
+def update_usuario(user_id: str, updated_user: UserModel):
+    for i, user in enumerate(users):
         if user.id == user_id:
-            update_user.created_at = user.created_at
-        
-            users[index] = update_user
-            
-            return {"message": f"Se ha modificado correctamente al usuario con el ID: {user_id}"}
+            users[i] = updated_user
+            return updated_user
+    return {"error": "Usuario no encontrado para modificar"}
 
-@user.delete('/users/{user_id}', tags=["Usuarios"])
-
-def delete_User(user_id: str):
-    for index, user in enumerate(users):
+# Ruta para eliminar un usuario por ID
+@user.delete('/users/{user_id}', response_model=UserModel,tags=['Usuarios'])
+def delete_usuario(user_id: str):
+    for i, user in enumerate(users):
         if user.id == user_id:
-            users.pop(index)
-            return {"message": f"Se ha eliminado correctamente al usuario con el ID: {user_id}"}
-        
-@user.post("/users/{user_id}", tags=["Usuarios"])
-
-def post_User(user_id: str):
-    for user in users:
-        if user.id == user_id:
-            return user
+            deleted_user = users.pop(i)
+            return deleted_user
+    return {"error": "Usuario no encontrado"}
