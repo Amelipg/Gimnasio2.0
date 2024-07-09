@@ -24,7 +24,7 @@ def create_user(db:Session, user: schemas.users.UserCreate):
                                 Numero_Telefonico_Movil=user.Numero_Telefonico_Movil,
                                 Estatus=user.Estatus,
                                 Fecha_Registro=user.Fecha_Registro,
-                                Fecha_Actualizacion=user.Fecha_Actualizacion),
+                                Fecha_Actualizacion=user.Fecha_Actualizacion)
                                 
     db.add(db_user)
     db.commit()

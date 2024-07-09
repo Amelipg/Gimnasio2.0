@@ -5,7 +5,7 @@ from config.db import Base
 import enum
 
 class MyGenero(enum.Enum):
-    Maculino = "Masculino"
+    Masculino = "Masculino"
     Femenino = "Femenino"
     Otro = "Otro"
 
