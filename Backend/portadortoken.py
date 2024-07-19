@@ -20,7 +20,7 @@ class Portador(HTTPBearer):
     async def __call__(self, request: Request, db:Session= Depends(get_db)):
         autorizacion = await super().__call__(request)
         dato=valida_token(autorizacion.credentials)
-        db_userlogin = crud.users.get_users_by_creentials(db, username=dato["Nombre_Usuario"],
+        db_userlogin = crud.users.get_users_by_credentials(db, username=dato["Nombre_Usuario"],
                                                           correo=dato["Correo_Electronico"],
                                                           telefono=dato["Numero_Telefonico_Movil"],
                                                           password=dato["Contrasena"])
