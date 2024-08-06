@@ -12,10 +12,10 @@ class p_nutricionalBase(BaseModel):
     Opciones_Respuesta: str
     # Id_persona: int
 
-class p_nutricionalCreate(p_nutricionalBase):
+class p_nutricionalesCreate(p_nutricionalBase):
     pass
 
-class p_nutricionalUpdate(p_nutricionalBase):
+class p_nutricionalesUpdate(p_nutricionalBase):
     pass
 
 class p_nutricional(p_nutricionalBase):

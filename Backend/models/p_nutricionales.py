@@ -1,23 +1,21 @@
-from sqlalchemy import Column,Boolean, Integer, String, DateTime, ForeignKey, Enum
-from sqlalchemy.dialects.mysql import LONGTEXT
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Boolean, Integer, String, DateTime, Enum
 from config.db import Base
 import enum
 
+# Define el Enum para TipoRespuesta
 class TipoRespuesta(enum.Enum):
     Abierta = "Abierta"
-    SI = "Si"
-    NO = "No"
+    Cerrada = "Cerrada"
 
+# Define el modelo de SQLAlchemy
 class p_nutricionales(Base):
     __tablename__ = 'tbb_preguntas_nutricionales'
 
     ID = Column(Integer, primary_key=True, index=True)
-    Pregunta = Column(String(20))
+    Pregunta = Column(String(255))  
     Tipo_Respuesta = Column(Enum(TipoRespuesta))
-    Descripcion = Column(String(80))
+    Descripcion = Column(String(255))  
     Fecha_Creacion = Column(DateTime)
-    Fecha_Actualizacion =Column(DateTime)
+    Fecha_Actualizacion = Column(DateTime)
     Estatus = Column(Boolean, default=False)
-    Opciones_Respuesta = Column(String(80))
-   
+    Opciones_Respuesta = Column(String(255))  
